@@ -13,15 +13,11 @@
         <nav class="navbar navbar-expand-lg d-flex justify-content-center navbar-light bg-light">
             <div id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link font-weight-bold" href="#">Salle de bain</a>
+                    {% for category in categories %}
+                    <li class="nav-item active mx-5">
+                        <a class="nav-link font-weight-bold" href="#">{{ category.name }}</a>
                     </li>
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link font-weight-bold" href="#">Cuisine</a>
-                    </li>
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link font-weight-bold" href="#">Salon</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </nav>
