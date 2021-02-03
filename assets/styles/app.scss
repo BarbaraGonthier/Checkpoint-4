@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+$primary: #05445eff;
+$secondary: #f7cb4dff;
+$third: #d4e3fdff;
+$grey: #f3f3f3ff;
+$font-family: 'Roboto', sans-serif;
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: $grey;
+    font-family: $font-family;
+}
+.banner{
+    //position: relative;
+    //overflow: hidden;
+}
+
+//.banner h1, h2, p {
+//    position: relative;
+//    z-index: 2;
+//}
+
+.introduction {
+    position: relative;
+    z-index: 2;
+    margin: 400px 900px 10px 100px;
+    background-color: #ffffffd9;
+}
+
+.banner img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    opacity: 0.6;
+}
+
+//.banner {
+//    display: flex;
+//    justify-content: flex-end;
+//    background: url("../images/home/banner.png") no-repeat fixed center;
+//    background-size: cover;
+//    height: 900px;
+//    //padding-top: var(--padding-barre);
+//}
+
