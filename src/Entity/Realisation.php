@@ -3,10 +3,14 @@
 namespace App\Entity;
 
 use App\Repository\RealisationRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=RealisationRepository::class)
+ * @Vich\Uploadable
  */
 class Realisation
 {
@@ -26,6 +30,12 @@ class Realisation
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
+
+    /**
+     * @Vich\UploadableField(mapping="realisation_file", fileNameProperty="realisation")
+     * @var File
+     */
+    private $realisationFile;
 
     public function getId(): ?int
     {
@@ -54,5 +64,18 @@ class Realisation
         $this->updatedAt = $updatedAt;
 
         return $this;
+    }
+
+    public function setRealisationFile(File $image = null)
+    {
+        $this->realisationFile = $image;
+        if ($image) {
+            $this->updatedAt = new DateTime('now');
+        }
+    }
+
+    public function getRealisationFile(): ?File
+    {
+        return $this->realisationFile;
     }
 }
