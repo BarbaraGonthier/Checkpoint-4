@@ -38,3 +38,24 @@ body {
     width: 100%;
     position: fixed;
 }
+
+.realisation img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.realisation div {
+    position: relative;
+    height:375px;
+    display : flex;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
+}
+
+.realisation h1 {
+    align-self: center;
+}
