@@ -12,14 +12,21 @@ body {
     background-color: $grey;
     font-family: $font-family;
 }
-//.banner{
+.banner{
+    //position: relative;
+    //overflow: hidden;
+}
+
+//.banner h1, h2, p {
 //    position: relative;
-//    overflow: hidden;
+//    z-index: 2;
 //}
-//
-.banner h1, h2, p {
+
+.introduction {
     position: relative;
     z-index: 2;
+    margin: 400px 900px 10px 100px;
+    background-color: #ffffffd9;
 }
 
 .banner img {
