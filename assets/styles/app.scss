@@ -12,21 +12,13 @@ body {
     background-color: $grey;
     font-family: $font-family;
 }
-.banner{
-    //position: relative;
-    //overflow: hidden;
-}
-
-//.banner h1, h2, p {
-//    position: relative;
-//    z-index: 2;
-//}
 
 .introduction {
     position: relative;
     z-index: 2;
     margin: 400px 900px 10px 100px;
     background-color: #ffffffd9;
+    color: $primary;
 }
 
 .banner img {
@@ -37,13 +29,4 @@ body {
     height: 900px;
     opacity: 0.6;
 }
-
-//.banner {
-//    display: flex;
-//    justify-content: flex-end;
-//    background: url("../images/home/banner.png") no-repeat fixed center;
-//    background-size: cover;
-//    height: 900px;
-//    //padding-top: var(--padding-barre);
-//}
 
