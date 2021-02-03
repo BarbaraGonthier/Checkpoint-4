@@ -3,5 +3,11 @@
 {% block title %}{{ parent() }} Accueil{% endblock %}
 
 {% block body %}
-    <h1>Welcome</h1>
+    <section class="banner">
+            <h1>Munari Tous Travaux</h1>
+            <h2>Electricité - Chauffage - Plomberie - Aménagement</h2>
+        <p>Nous réalisons vos travaux d'intérieurs, allant de l'installation électrique à l'installation de cuisine, salle de bain, en passant par la plomberie.
+            Nous nous occupons également de votre chauffage et climatisation afin de vous garantir une offre complète, clés en main.</p>
+        <img src="{{ asset('build/home/banner.png') }}" alt="home-image" title="image d'accueil">
+    </section
 {% endblock %}
