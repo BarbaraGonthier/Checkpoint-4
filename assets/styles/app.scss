@@ -5,17 +5,19 @@ $secondary: #d4e3fdff;
 $third: #f7cb4dff;
 $grey: #f3f3f3ff;
 $font-family: 'Roboto', sans-serif;
+$navbar-height: 90px;
 
 @import "~bootstrap/scss/bootstrap";
 
 body {
     font-family: $font-family;
+    padding-top: $navbar-height;
 }
 
 .introduction {
     position: relative;
     z-index: 2;
-    margin: 400px 900px 10px 100px;
+    margin: 300px 900px 10px 100px;
     background-color: #ffffffd9;
     color: $primary;
 }
@@ -27,6 +29,7 @@ body {
     width: 100%;
     height: 900px;
     opacity: 0.6;
+    padding-top: $navbar-height;
 }
 
 .footer {
