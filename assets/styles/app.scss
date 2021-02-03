@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 $primary: #05445eff;
-$secondary: #d4e3fdff;
-$third: #f7cb4dff;
+$secondary: #00bbcfff;
+$warning: #f7cb4dff;
 $grey: #f3f3f3ff;
 $font-family: 'Roboto', sans-serif;
 $navbar-height: 90px;
@@ -11,6 +11,7 @@ $navbar-height: 90px;
 
 body {
     font-family: $font-family;
+    font-weight: bold;
     padding-top: $navbar-height;
 }
 
