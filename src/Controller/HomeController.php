@@ -13,8 +13,6 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('program/index.html.twig', [
-            'website' => 'Wild Séries',
-        ]);
+        return $this->render('home/index.html.twig');
     }
 }
