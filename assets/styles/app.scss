@@ -3,7 +3,7 @@
 $primary: #05445eff;
 $secondary: #00bbcfff;
 $warning: #f7cb4dff;
-$grey: #f3f3f3ff;
+$light: #f3f3f3ff;
 $font-family: 'Roboto', sans-serif;
 $navbar-height: 90px;
 
@@ -28,7 +28,6 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 900px;
     opacity: 0.6;
     padding-top: $navbar-height;
 }
@@ -63,11 +62,53 @@ body {
 
 .realisation-picture {
     height: 500px;
-    width: 400px;
     overflow: hidden;
 }
 
-//.realisation-picture img {
-//    height: auto;
-//    width: 300px;
-//}
+.category li {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+@media screen and (max-width: 739px) {
+    .banner img {
+        position: absolute;
+        width: 100%;
+        padding-top: $navbar-height/2;
+    }
+    .realisation img {
+        position: absolute;
+        width: 100%;
+        padding-top: $navbar-height/2;
+    }
+
+    .realisation div {
+        height:90px;
+        margin-top: 50px;
+    }
+
+    .introduction {
+        margin: 220px 0px 0px 0px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .category li {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .category {
+        flex-direction: row;
+    }
+}
