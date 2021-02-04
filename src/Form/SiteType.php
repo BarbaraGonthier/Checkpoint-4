@@ -12,14 +12,16 @@ class SiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('status')
             ->add('name')
             ->add('type')
             ->add('place')
             ->add('client')
+            ->add('startingDate')
             ->add('duration')
             ->add('quoteNumber')
             ->add('worker')
-            ->add('startingDate')
+            ->add('comment')
         ;
     }
 

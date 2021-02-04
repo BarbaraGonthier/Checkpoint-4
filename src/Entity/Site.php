@@ -57,6 +57,16 @@ class Site
      */
     private $startingDate;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $comment;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $status;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -154,6 +164,30 @@ class Site
     public function setStartingDate(\DateTimeInterface $startingDate): self
     {
         $this->startingDate = $startingDate;
+
+        return $this;
+    }
+
+    public function getComment(): ?string
+    {
+        return $this->comment;
+    }
+
+    public function setComment(?string $comment): self
+    {
+        $this->comment = $comment;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(?string $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }

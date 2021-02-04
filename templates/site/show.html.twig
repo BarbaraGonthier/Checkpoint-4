@@ -12,6 +12,10 @@
                 <td>{{ site.id }}</td>
             </tr>
             <tr>
+                <th>Statut</th>
+                <td>{{ site.status }}</td>
+            </tr>
+            <tr>
                 <th>Name</th>
                 <td>{{ site.name }}</td>
             </tr>
@@ -28,10 +32,6 @@
                 <td>{{ site.client }}</td>
             </tr>
             <tr>
-                <th>Duration</th>
-                <td>{{ site.duration }}</td>
-            </tr>
-            <tr>
                 <th>QuoteNumber</th>
                 <td>{{ site.quoteNumber }}</td>
             </tr>
@@ -42,6 +42,14 @@
             <tr>
                 <th>Starting Date</th>
                 <td>{{ site.startingDate|date("d/m/Y") }}</td>
+            </tr>
+            <tr>
+                <th>Duration</th>
+                <td>{{ site.duration }}</td>
+            </tr>
+            <tr>
+                <th>Commentaires</th>
+                <td>{{ site.comment }}</td>
             </tr>
         </tbody>
     </table>
