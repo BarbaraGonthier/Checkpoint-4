@@ -15,7 +15,7 @@
                 <ul class="navbar-nav">
                     {% for category in categories %}
                     <li class="nav-item active mx-5">
-                        <a class="nav-link font-weight-bold" href="#">{{ category.name }}</a>
+                        <a class="nav-link font-weight-bold" href="{{ path('realisations', { category : category.name }) }}">{{ category.name }}</a>
                     </li>
                     {% endfor %}
                 </ul>

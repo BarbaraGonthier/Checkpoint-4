@@ -11,11 +11,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class RealisationExampleController extends AbstractController
 {
     /**
-     * @Route("/realisations", name="realisations")
+     * @Route("/realisations/{category}", name="realisations")
      */
-    public function index(CategoryRepository $categoryRepository, RealisationRepository $realisationRepository): Response
+    public function index(string $category,CategoryRepository $categoryRepository, RealisationRepository $realisationRepository): Response
     {
-        $category='Cuisine';
         $categories = $categoryRepository->findAll();
         $realisations = $realisationRepository->findByCategory($category);
 
