@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Services{% endblock %}
+
+{% block body %}
+    <section class="realisation">
+        <div>
+            <h1 class="text-primary">Services</h1>
+        </div>
+        <img src="{{ asset('build/services/service-banner.png') }}" alt="realisation-image" title="image de la section réalisation">
+    </section>
+    <section>
+        <div class="container mb-5 pb-5">
+        <div class="card mb-3 p-5" >
+            <div class="row no-gutters">
+                <div class="col-md-4 pr-4">
+                    <img src="{{ asset('build/services/heating.jpg') }}" class="card-img" alt="Chauffage">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Chauffage</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="card mb-3 p-5" >
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">Electricité</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-4">
+                        <img src="{{ asset('build/services/electricity.png') }}" class="card-img" alt="Electricité">
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 p-5" >
+                <div class="row no-gutters">
+                    <div class="col-md-4 pr-4">
+                        <img src="{{ asset('build/services/plumbing.png') }}" class="card-img" alt="Plomberie">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">Plomberie</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 p-5" >
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">Travaux d'aménagement</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-4">
+                        <img src="{{ asset('build/services/travaux.jpg') }}" class="card-img" alt="Travaux">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
