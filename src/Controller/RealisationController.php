@@ -38,6 +38,7 @@ class RealisationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($realisation);
             $entityManager->flush();
+            $this->addFlash('success', 'La nouvelle réalisation a bien été publiée');
 
             return $this->redirectToRoute('realisation_index');
         }
@@ -68,6 +69,7 @@ class RealisationController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success', 'Modification effectuée');
 
             return $this->redirectToRoute('realisation_index');
         }

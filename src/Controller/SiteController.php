@@ -40,6 +40,7 @@ class SiteController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($site);
             $entityManager->flush();
+            $this->addFlash('success', 'Nouveau chantier créé');
 
             return $this->redirectToRoute('site_index');
         }
@@ -71,6 +72,8 @@ class SiteController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
+            $this->addFlash('success', 'Modification effectuée');
+
             return $this->redirectToRoute('site_index');
         }
 
@@ -89,6 +92,7 @@ class SiteController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($site);
             $entityManager->flush();
+            $this->addFlash('danger', 'Chantier supprimé');
         }
 
         return $this->redirectToRoute('site_index');
