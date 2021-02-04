@@ -37,9 +37,7 @@
                     Réalisations
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {% for category in categories %}
-                    <a class="dropdown-item" href="{{ path('realisations', { display : category.name }) }}">{{ category.name }}</a>
-                    {% endfor %}
+                    {{ render(controller('App\\Controller\\HomeController::navbarTop')) }}
                 </div>
             </li>
             <li class="nav-item mr-5">
