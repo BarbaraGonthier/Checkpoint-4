@@ -11,12 +11,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class RealisationExampleController extends AbstractController
 {
     /**
-     * @Route("/realisations", name="realisations")
+     * @Route("/realisations/{category}", name="realisations")
      */
-    public function index(CategoryRepository $categoryRepository, RealisationRepository $realisationRepository): Response
+    public function index(string $category,CategoryRepository $categoryRepository, RealisationRepository $realisationRepository): Response
     {
         $categories = $categoryRepository->findAll();
-        $realisations = $realisationRepository->findAll();
+        $realisations = $realisationRepository->findByCategory($category);
 
         return $this->render('realisation-example/realisations.html.twig', [
             'categories' => $categories,

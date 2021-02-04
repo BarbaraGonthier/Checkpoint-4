@@ -19,6 +19,17 @@ class RealisationRepository extends ServiceEntityRepository
         parent::__construct($registry, Realisation::class);
     }
 
+    public function findByCategory(?string $category): array
+    {
+        return $this->createQueryBuilder('realisation')
+            ->select('realisation.name, category.name as categoryName')
+            ->innerJoin('App\Entity\Category', 'category', 'WITH', 'category.id=realisation.category')
+            ->where('category.name = :category')
+            ->setParameter('category', $category)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Realisation[] Returns an array of Realisation objects
     //  */
