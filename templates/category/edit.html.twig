@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Category{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="my-4">Modifier la catégorie</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+            {{ include('category/_form.html.twig', {'button_label': 'Modifier'}) }}
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-8 offset-2">
+            {{ include('category/_delete_form.html.twig') }}
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-8 offset-2">
+            <a href="{{ path('category_index') }}" class="btn btn-primary">Retour à la liste</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

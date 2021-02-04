@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Category{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1 class="my-4">Créer une nouvelle catégorie</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-8 offset-2">
+                {{ include('category/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-8 offset-2">
+                <a href="{{ path('category_index') }}" class="btn btn-primary">Retour à la liste</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
