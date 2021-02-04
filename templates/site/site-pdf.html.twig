@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 class="my-4 text-primary">{{site.name}}</h1>
+<table>
+    <tbody>
+    <tr>
+        <th style="text-align:left">Etat :</th>
+        <td>{{ site.status }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Nom :</th>
+        <td>{{ site.name }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Type :</th>
+        <td>{{ site.type }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Lieu :</th>
+        <td>{{ site.place }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Client :</th>
+        <td>{{ site.client }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left; padding-right:10px">Devis n° :</th>
+        <td>{{ site.quoteNumber }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Ouvrier :</th>
+        <td>{{ site.worker }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Date de début :</th>
+        <td>{{ site.startingDate|date("d/m/Y") }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Durée estimée :</th>
+        <td>{{ site.duration }}</td>
+    </tr>
+    <tr>
+        <th style="text-align:left">Commentaires :</th>
+        <td>{{ site.comment }}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
