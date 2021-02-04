@@ -92,6 +92,7 @@ class SiteController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($site);
             $entityManager->flush();
+            $this->addFlash('danger', 'Chantier supprimé');
         }
 
         return $this->redirectToRoute('site_index');
