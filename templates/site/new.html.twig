@@ -3,9 +3,21 @@
 {% block title %}New Site{% endblock %}
 
 {% block body %}
-    <h1>Create new Site</h1>
-
-    {{ include('site/_form.html.twig') }}
-
-    <a href="{{ path('site_index') }}">back to list</a>
+    <div class="container mb-5 pb-5">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1 class="my-4 text-primary">Créer un nouveau chantier</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-8 offset-2">
+                {{ include('site/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-8 offset-2">
+                <a href="{{ path('site_index') }}" class="btn btn-primary">Retour à la liste</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
