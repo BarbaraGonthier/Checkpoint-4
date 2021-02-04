@@ -16,7 +16,6 @@ class RealisationType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('updatedAt')
             ->add('category', EntityType::class, [
                 'class' => Category::class,
                 'choice_label' => 'name'
