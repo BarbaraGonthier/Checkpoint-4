@@ -60,3 +60,14 @@ body {
 .realisation h1 {
     align-self: center;
 }
+
+.realisation-picture {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.realisation-picture img {
+    height: auto;
+    width: 300px;
+}
