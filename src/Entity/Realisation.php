@@ -32,10 +32,10 @@ class Realisation
     private $updatedAt;
 
     /**
-     * @Vich\UploadableField(mapping="realisation_file", fileNameProperty="realisation")
+     * @Vich\UploadableField(mapping="name_file", fileNameProperty="name")
      * @var File
      */
-    private $realisationFile;
+    private $nameFile;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="realisations")
@@ -72,17 +72,17 @@ class Realisation
         return $this;
     }
 
-    public function setRealisationFile(File $image = null)
+    public function setNameFile(File $image = null)
     {
-        $this->realisationFile = $image;
+        $this->nameFile = $image;
         if ($image) {
             $this->updatedAt = new DateTime('now');
         }
     }
 
-    public function getRealisationFile(): ?File
+    public function getNameFile(): ?File
     {
-        return $this->realisationFile;
+        return $this->nameFile;
     }
 
     public function getCategory(): ?Category

@@ -21,10 +21,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto ">
             {% if is_granted("ROLE_ADMIN") %}
-                <li class="nav-item mr-5">
-                    <a class="nav-link text-primary font-weight-bold h5" href="{{ path('category_index') }}">
-                        Gérer les categories
+                <li class="nav-item dropdown mr-5">
+                    <a class="nav-link dropdown-toggle text-primary font-weight-bold h5" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administration
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ path('realisation_index') }}">Gérer les réalisation</a>
+                        <a class="dropdown-item" href="{{ path('category_index') }}">Gérer les catégories</a>
+
+                    </div>
                 </li>
             {% endif %}
             <li class="nav-item mr-5">
