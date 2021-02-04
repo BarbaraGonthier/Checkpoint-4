@@ -3,24 +3,22 @@
 {% block title %}Site{% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="container mb-5 pb-5">
     <div class="row">
-        <div class="col-8 offset-2">
-            <h1 class="my-4 text-primary">{{site.name}}</h1>
+        <div class="col">
+            <h1 class="my-4 text-primary col-8 offset-2">{{site.name}}</h1>
         </div>
     </div>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
     <table class="table">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ site.id }}</td>
-            </tr>
             <tr>
                 <th>Etat</th>
                 <td>{{ site.status }}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th>Nom</th>
                 <td>{{ site.name }}</td>
             </tr>
             <tr>
@@ -28,7 +26,7 @@
                 <td>{{ site.type }}</td>
             </tr>
             <tr>
-                <th>Place</th>
+                <th>Lieu</th>
                 <td>{{ site.place }}</td>
             </tr>
             <tr>
@@ -36,19 +34,19 @@
                 <td>{{ site.client }}</td>
             </tr>
             <tr>
-                <th>QuoteNumber</th>
+                <th>Numéro de devis</th>
                 <td>{{ site.quoteNumber }}</td>
             </tr>
             <tr>
-                <th>Worker</th>
+                <th>Ouvrier</th>
                 <td>{{ site.worker }}</td>
             </tr>
             <tr>
-                <th>Starting Date</th>
+                <th>date de début</th>
                 <td>{{ site.startingDate|date("d/m/Y") }}</td>
             </tr>
             <tr>
-                <th>Duration</th>
+                <th>Durée estimée</th>
                 <td>{{ site.duration }}</td>
             </tr>
             <tr>
@@ -57,11 +55,23 @@
             </tr>
         </tbody>
     </table>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+    <a href="{{ path('site_edit', {'id': site.id}) }}" class="btn btn-warning">Modifier</a>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-8 offset-2">
+            {{ include('site/_delete_form.html.twig') }}
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-8 offset-2">
+    <a href="{{ path('site_index') }}" class="btn btn-primary">Retour à la liste</a>
+        </div>
+    </div>
 
-    <a href="{{ path('site_index') }}">back to list</a>
-
-    <a href="{{ path('site_edit', {'id': site.id}) }}">edit</a>
-
-    {{ include('site/_delete_form.html.twig') }}
 </div>
 {% endblock %}

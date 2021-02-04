@@ -38,7 +38,7 @@ class SiteType extends AbstractType
                 'label' => 'Numéro de devis'
             ])
             ->add('worker', TextType::class, [
-                'label' => 'Nom'
+                'label' => 'Ouvrier'
             ])
             ->add('comment', TextType::class, [
                 'label' => 'Commentaire'
