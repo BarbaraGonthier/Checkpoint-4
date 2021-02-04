@@ -65,6 +65,11 @@ body {
     overflow: hidden;
 }
 
+.category li {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
 @media screen and (max-width: 739px) {
     .banner img {
         position: absolute;
@@ -83,7 +88,7 @@ body {
     }
 
     .introduction {
-        margin: 190px 0px 0px 0px;
+        margin: 220px 0px 0px 0px;
     }
 
     h1 {
@@ -92,5 +97,18 @@ body {
 
     h2 {
         font-size: 1.2rem;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .category li {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .category {
+        flex-direction: row;
     }
 }
