@@ -52,6 +52,11 @@ class Site
      */
     private $worker;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $startingDate;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -137,6 +142,18 @@ class Site
     public function setWorker(string $worker): self
     {
         $this->worker = $worker;
+
+        return $this;
+    }
+
+    public function getStartingDate(): ?\DateTimeInterface
+    {
+        return $this->startingDate;
+    }
+
+    public function setStartingDate(\DateTimeInterface $startingDate): self
+    {
+        $this->startingDate = $startingDate;
 
         return $this;
     }

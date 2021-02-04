@@ -3,20 +3,23 @@
 {% block title %}Site index{% endblock %}
 
 {% block body %}
-    <h1>Site index</h1>
-
-    <table class="table">
+<div class="container mb-5 pb-5">
+    <h1 class="my-4 text-primary">Liste des chantiers</h1>
+    <a href="{{ path('site_new') }}" class="btn btn-secondary my-4">Ajouter un chantier</a>
+    <table class="table mt-2 mb-5">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Type</th>
-                <th>Place</th>
+{#                <th>Place</th>#}
                 <th>Client</th>
-                <th>Duration</th>
-                <th>QuoteNumber</th>
-                <th>Worker</th>
-                <th>actions</th>
+{#                <th>Duration</th>#}
+{#                <th>QuoteNumber</th>#}
+{#                <th>Worker</th>#}
+                <th>Date de début</th>
+                <th>Actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,14 +28,14 @@
                 <td>{{ site.id }}</td>
                 <td>{{ site.name }}</td>
                 <td>{{ site.type }}</td>
-                <td>{{ site.place }}</td>
+{#                <td>{{ site.place }}</td>#}
                 <td>{{ site.client }}</td>
-                <td>{{ site.duration }}</td>
-                <td>{{ site.quoteNumber }}</td>
-                <td>{{ site.worker }}</td>
+{#                <td>{{ site.duration }}</td>#}
+{#                <td>{{ site.quoteNumber }}</td>#}
+{#                <td>{{ site.worker }}</td>#}
+                <td>{{ site.startingDate|date("d/m/Y") }}</td>
                 <td>
-                    <a href="{{ path('site_show', {'id': site.id}) }}">show</a>
-                    <a href="{{ path('site_edit', {'id': site.id}) }}">edit</a>
+                    <a href="{{ path('site_show', {'id': site.id}) }}" class="btn btn-warning">Détails</a>
                 </td>
             </tr>
         {% else %}
@@ -42,6 +45,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('site_new') }}">Create new</a>
+</div>
 {% endblock %}

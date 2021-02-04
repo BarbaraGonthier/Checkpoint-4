@@ -19,6 +19,7 @@ class SiteType extends AbstractType
             ->add('duration')
             ->add('quoteNumber')
             ->add('worker')
+            ->add('startingDate')
         ;
     }
 
