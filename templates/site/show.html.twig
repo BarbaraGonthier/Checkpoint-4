@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Site{% endblock %}
+
+{% block body %}
+<div class="container mb-5 pb-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="my-4 text-primary col-8 offset-2">{{site.name}}</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Etat</th>
+                <td>{{ site.status }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ site.name }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ site.type }}</td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td>{{ site.place }}</td>
+            </tr>
+            <tr>
+                <th>Client</th>
+                <td>{{ site.client }}</td>
+            </tr>
+            <tr>
+                <th>Numéro de devis</th>
+                <td>{{ site.quoteNumber }}</td>
+            </tr>
+            <tr>
+                <th>Ouvrier</th>
+                <td>{{ site.worker }}</td>
+            </tr>
+            <tr>
+                <th>date de début</th>
+                <td>{{ site.startingDate|date("d/m/Y") }}</td>
+            </tr>
+            <tr>
+                <th>Durée estimée</th>
+                <td>{{ site.duration }}</td>
+            </tr>
+            <tr>
+                <th>Commentaires</th>
+                <td>{{ site.comment }}</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+    <a href="{{ path('site_edit', {'id': site.id}) }}" class="btn btn-warning">Modifier</a>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-8 offset-2">
+            {{ include('site/_delete_form.html.twig') }}
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-8 offset-2">
+    <a href="{{ path('site_index') }}" class="btn btn-primary">Retour à la liste</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

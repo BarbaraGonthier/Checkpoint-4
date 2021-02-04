@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Site index{% endblock %}
+
+{% block body %}
+<div class="container mb-5 pb-5">
+    <h1 class="my-4 text-primary">Liste des chantiers</h1>
+    <a href="{{ path('site_new') }}" class="btn btn-secondary my-4">Ajouter un chantier</a>
+    <table class="table mt-2 mb-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Etat</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Client</th>
+                <th>Date de début</th>
+                <th>Duration</th>
+                <th>Actions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for site in sites %}
+            <tr>
+                <td>{{ site.id }}</td>
+                <td>{{ site.status }}</td>
+                <td>{{ site.name }}</td>
+                <td>{{ site.type }}</td>
+                <td>{{ site.client }}</td>
+                <td>{{ site.startingDate|date("d/m/Y") }}</td>
+                <td>{{ site.duration }}</td>
+                <td>
+                    <a href="{{ path('site_show', {'id': site.id}) }}" class="btn btn-warning">Détails</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
