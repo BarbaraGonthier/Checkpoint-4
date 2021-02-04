@@ -15,8 +15,9 @@ class RealisationExampleController extends AbstractController
      */
     public function index(CategoryRepository $categoryRepository, RealisationRepository $realisationRepository): Response
     {
+        $category='Cuisine';
         $categories = $categoryRepository->findAll();
-        $realisations = $realisationRepository->findAll();
+        $realisations = $realisationRepository->findByCategory($category);
 
         return $this->render('realisation-example/realisations.html.twig', [
             'categories' => $categories,
