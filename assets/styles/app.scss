@@ -28,7 +28,6 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 900px;
     opacity: 0.6;
     padding-top: $navbar-height;
 }
@@ -67,7 +66,32 @@ body {
     overflow: hidden;
 }
 
-//.realisation-picture img {
-//    height: auto;
-//    width: 300px;
-//}
+@media screen and (max-width: 739px) {
+    .banner img {
+        position: absolute;
+        width: 100%;
+        padding-top: $navbar-height/2;
+    }
+    .realisation img {
+        position: absolute;
+        width: 100%;
+        padding-top: $navbar-height/2;
+    }
+
+    .realisation div {
+        height:90px;
+        margin-top: 50px;
+    }
+
+    .introduction {
+        margin: 190px 0px 0px 0px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
