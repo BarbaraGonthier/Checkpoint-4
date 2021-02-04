@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Site;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -28,7 +29,7 @@ class SiteType extends AbstractType
             ->add('client', TextType::class, [
                 'label' => 'Client'
             ])
-            ->add('startingDate', TextType::class, [
+            ->add('startingDate', DateTimeType::class, [
                 'label' => 'Date de début'
             ])
             ->add('duration', TextType::class, [
@@ -41,7 +42,8 @@ class SiteType extends AbstractType
                 'label' => 'Ouvrier'
             ])
             ->add('comment', TextType::class, [
-                'label' => 'Commentaire'
+                'label' => 'Commentaire',
+                'required' => 'false'
             ])
         ;
     }

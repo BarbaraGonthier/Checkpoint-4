@@ -55,7 +55,7 @@ class Site
     /**
      * @ORM\Column(type="datetime")
      */
-    private $startingDate;
+    private \DateTimeInterface $startingDate;
 
     /**
      * @ORM\Column(type="text", nullable=true)
