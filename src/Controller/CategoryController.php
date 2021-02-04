@@ -90,6 +90,7 @@ class CategoryController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($category);
             $entityManager->flush();
+            $this->addFlash('danger', 'Catégorie supprimée');
         }
 
         return $this->redirectToRoute('category_index');

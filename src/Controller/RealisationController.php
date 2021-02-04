@@ -89,6 +89,7 @@ class RealisationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($realisation);
             $entityManager->flush();
+            $this->addFlash('danger', 'Réalisation supprimée');
         }
 
         return $this->redirectToRoute('realisation_index');
