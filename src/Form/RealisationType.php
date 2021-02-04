@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 
 class RealisationType extends AbstractType
 {
@@ -20,6 +21,11 @@ class RealisationType extends AbstractType
                 'class' => Category::class,
                 'choice_label' => 'name'
                 ])
+            ->add('nameFile', VichFileType::class, [
+                'required'      => true,
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_uri' => false, // not mandatory, default is true
+            ])
         ;
     }
 
