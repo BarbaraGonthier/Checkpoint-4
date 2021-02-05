@@ -23,12 +23,19 @@
             {% if is_granted("ROLE_ADMIN") %}
                 <li class="nav-item dropdown mr-5">
                     <a class="nav-link dropdown-toggle text-primary font-weight-bold h5" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Outils
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ path('site_index') }}">Suivi des chantiers</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown mr-5">
+                    <a class="nav-link dropdown-toggle text-primary font-weight-bold h5" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Administration
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ path('realisation_index') }}">Gérer les réalisations</a>
                         <a class="dropdown-item" href="{{ path('category_index') }}">Gérer les catégories</a>
-                        <a class="dropdown-item" href="{{ path('site_index') }}">Gérer les chantiers</a>
                     </div>
                 </li>
             {% endif %}
